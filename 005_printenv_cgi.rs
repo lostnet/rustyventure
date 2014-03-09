@@ -6,8 +6,7 @@
 */
 use std::os;
 
-#[start]
-fn main(_:int, _:**u8) ->int {
+fn main() {
 	let e = os::env();
 
 	println!("Content-Type: text/plain\n\n");
@@ -17,5 +16,4 @@ fn main(_:int, _:**u8) ->int {
 			(ref cv, ref vv) => println!("{}={}", cv, vv)
 		}
 	}
-	0
 }
